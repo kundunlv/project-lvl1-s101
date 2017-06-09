@@ -1,0 +1,36 @@
+{
+#!/Users/bagos/Desktop/Project1/mypackage node
+
+{
+  "presets": ["env"]
+}
+
+  "name": "nodejs-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+	"brain-games": "dist/bin/brain-games.js"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+   "scripts": {
+    "babel-node": "babel-node",
+	"install" : "make && make install",
+	"build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
++    "prepublish": "npm run build"
+  }
+  "repository": {
++    "type": "git",
++    "url": "git+https://github.com/kundunlv/project-lvl1-s101.git"
++  },
+  "author": "",
+  "license": "ISC"
+  "devDependencies": {
+    "babel-cli": "*", 
+	"babel-core": "*", 
+	"babel-preset-env": "*", 
+	"babel-preset-stage-0": "*"
+  }
+}
